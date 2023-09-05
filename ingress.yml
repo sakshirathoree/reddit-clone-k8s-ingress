@@ -2,25 +2,30 @@ apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
   name: ingress-reddit-app
+  namespace: reddit
 spec:
+  ingressClassName: nginx
   rules:
-  - host: "domain.com"
+  - host: redditclone.com
     http:
       paths:
       - pathType: Prefix
-        path: "/test"
+        path: "/"
         backend:
           service:
             name: reddit-clone-service
+            # Port Service is listening on
             port:
               number: 3000
-  - host: "*.domain.com"
+  - host: "*.redditclone.com"
     http:
       paths:
       - pathType: Prefix
-        path: "/test"
+        path: "/"
         backend:
           service:
             name: reddit-clone-service
+            # Port Service is listening on
             port:
               number: 3000
+
