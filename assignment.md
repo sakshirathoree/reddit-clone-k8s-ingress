@@ -213,7 +213,7 @@ minikube service reddit-clone-service -n reddit created --url
 ```
   ![image](https://github.com/sakshirathoree/reddit-clone-k8s-ingress/assets/67737704/525ecfae-4912-4a11-bab1-0963391c152c)
 
-** Make sure to open port 3000 & 30007 in the Deployment Server of the security group**
+**Make sure to open port 3000 & 30007 in the Deployment Server of the security group**
 
 ![image](https://github.com/sakshirathoree/reddit-clone-k8s-ingress/assets/67737704/cd88eec9-51f9-4b0c-b975-8958b0582b1c)
 
@@ -246,7 +246,7 @@ Now we will be configuring ingress.
 - An Ingress controller fulfills and routes these rules, ensuring traffic goes to the right place.
 - It's a powerful tool for simplifying external access to your Minikube cluster.
 
-### 1. Enable Ingress in Minikube
+## 1. Enable Ingress in Minikube
 In Minikube, ingress comes as an addon and we need to enable it before configuring it. Run minikube addons enable ingress in the terminal to enable ingress. The output should be like this:
 
 ![image](https://github.com/sakshirathoree/reddit-clone-k8s-ingress/assets/67737704/8c55c2ef-08f5-402c-8b91-26b9a07c18e9)
